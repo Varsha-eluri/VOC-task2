@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Resume Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- LEFT SIDE: FORM -->
+  <div class="form-section">
+
+    <h2>Resume Builder</h2>
+
+    <input type="text" id="name" placeholder="Full Name">
+    <input type="email" id="email" placeholder="Email">
+    <input type="text" id="phone" placeholder="Phone Number">
+
+    <textarea id="summary" placeholder="Profile Summary"></textarea>
+
+    <h3>Education</h3>
+    <div id="educationContainer">
+      <input type="text" class="education" placeholder="Education Details">
+    </div>
+    <button onclick="addEducation()">+ Add Education</button>
+
+    <h3>Experience</h3>
+    <div id="experienceContainer">
+      <input type="text" class="experience" placeholder="Experience Details">
+    </div>
+    <button onclick="addExperience()">+ Add Experience</button>
+
+    <h3>Skills</h3>
+    <input type="text" id="skills" placeholder="HTML, CSS, JS">
+
+    <br><br>
+
+    <button onclick="clearForm()">Clear</button>
+
+  </div>
+
+  <!-- RIGHT SIDE: PREVIEW -->
+  <div class="preview-section">
+
+    <h2>Live Preview</h2>
+
+    <div class="resume-card">
+
+      <h1 id="r-name">Your Name</h1>
+      <p id="r-contact"></p>
+
+      <h3>Summary</h3>
+      <p id="r-summary"></p>
+
+      <h3>Education</h3>
+      <ul id="r-education"></ul>
+
+      <h3>Experience</h3>
+      <ul id="r-experience"></ul>
+
+      <h3>Skills</h3>
+      <div id="r-skills"></div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
